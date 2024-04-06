@@ -1,0 +1,1060 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9952546E-8944-4C4B-8B60-007E39D2A3CF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>qrmenu</RootNamespace>
+    <AssemblyName>qrmenu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44307</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="download-version\about-v2.html" />
+    <Content Include="download-version\about.html" />
+    <Content Include="download-version\assets\css\bootstrap.min.css" />
+    <Content Include="download-version\assets\css\fontawesome.min.css" />
+    <Content Include="download-version\assets\css\jquery.datetimepicker.min.css" />
+    <Content Include="download-version\assets\css\layerslider.min.css" />
+    <Content Include="download-version\assets\css\magnific-popup.min.css" />
+    <Content Include="download-version\assets\css\slick.min.css" />
+    <Content Include="download-version\assets\css\style.css" />
+    <Content Include="download-version\assets\img\bg\board_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\booking_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\booking_bg_2.png" />
+    <Content Include="download-version\assets\img\bg\contact_info_bg.png" />
+    <Content Include="download-version\assets\img\bg\counter_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\discount_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\discount_bg_2.jpg" />
+    <Content Include="download-version\assets\img\bg\discount_bg_3.jpg" />
+    <Content Include="download-version\assets\img\bg\download_bg_1.png" />
+    <Content Include="download-version\assets\img\bg\feature_bg_1.png" />
+    <Content Include="download-version\assets\img\bg\feature_bg_2.png" />
+    <Content Include="download-version\assets\img\bg\footer_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\footer_bg_2.png" />
+    <Content Include="download-version\assets\img\bg\footer_bg_3.jpg" />
+    <Content Include="download-version\assets\img\bg\menu_bg_1.png" />
+    <Content Include="download-version\assets\img\bg\offer_banner_1.jpg" />
+    <Content Include="download-version\assets\img\bg\offer_banner_2.jpg" />
+    <Content Include="download-version\assets\img\bg\product_bg_1.png" />
+    <Content Include="download-version\assets\img\bg\reservation_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\subscribe_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\table_bg_1.jpg" />
+    <Content Include="download-version\assets\img\bg\testi_bg_1.png" />
+    <Content Include="download-version\assets\img\bg\testi_bg_2.png" />
+    <Content Include="download-version\assets\img\bg\why_bg_1.png" />
+    <Content Include="download-version\assets\img\blog\author-1-1.png" />
+    <Content Include="download-version\assets\img\blog\author_1.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-author.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-s-1-1.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-s-1-2.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-s-1-3.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-s-1-4.jpg" />
+    <Content Include="download-version\assets\img\blog\blog-s-1-5.jpg" />
+    <Content Include="download-version\assets\img\blog\blog_1_1.jpg" />
+    <Content Include="download-version\assets\img\blog\blog_1_2.jpg" />
+    <Content Include="download-version\assets\img\blog\blog_1_3.jpg" />
+    <Content Include="download-version\assets\img\blog\blog_1_4.jpg" />
+    <Content Include="download-version\assets\img\blog\comment-author-1.jpg" />
+    <Content Include="download-version\assets\img\blog\comment-author-2.jpg" />
+    <Content Include="download-version\assets\img\blog\comment-author-3.jpg" />
+    <Content Include="download-version\assets\img\blog\recent-post-1-1.jpg" />
+    <Content Include="download-version\assets\img\blog\recent-post-1-2.jpg" />
+    <Content Include="download-version\assets\img\blog\recent-post-1-3.jpg" />
+    <Content Include="download-version\assets\img\breadcumb\breadcumb-bg.jpg" />
+    <Content Include="download-version\assets\img\category\category_1_1.png" />
+    <Content Include="download-version\assets\img\category\category_1_10.png" />
+    <Content Include="download-version\assets\img\category\category_1_2.png" />
+    <Content Include="download-version\assets\img\category\category_1_3.png" />
+    <Content Include="download-version\assets\img\category\category_1_4.png" />
+    <Content Include="download-version\assets\img\category\category_1_5.png" />
+    <Content Include="download-version\assets\img\category\category_1_6.png" />
+    <Content Include="download-version\assets\img\category\category_1_7.png" />
+    <Content Include="download-version\assets\img\category\category_1_8.png" />
+    <Content Include="download-version\assets\img\category\category_1_9.png" />
+    <Content Include="download-version\assets\img\coffee\blog\blog_2_1.jpg" />
+    <Content Include="download-version\assets\img\coffee\blog\blog_2_2.jpg" />
+    <Content Include="download-version\assets\img\coffee\blog\blog_2_3.jpg" />
+    <Content Include="download-version\assets\img\coffee\blog\blog_2_4.jpg" />
+    <Content Include="download-version\assets\img\coffee\category\category_2_1.png" />
+    <Content Include="download-version\assets\img\coffee\category\category_2_2.png" />
+    <Content Include="download-version\assets\img\coffee\category\category_2_3.png" />
+    <Content Include="download-version\assets\img\coffee\category\category_2_4.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_bg_4_1.jpg" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_img_4_1.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_img_4_2.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_img_4_3.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_1.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_2.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_3.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_4.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_4.svg" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_shape_4_5.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_thumb_4_1.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_thumb_4_2.png" />
+    <Content Include="download-version\assets\img\coffee\hero\hero_thumb_4_3.png" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_5_1.png" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_5_2.png" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_5_3.png" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_6_1.svg" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_6_2.svg" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_6_3.svg" />
+    <Content Include="download-version\assets\img\coffee\icon\feature_6_4.svg" />
+    <Content Include="download-version\assets\img\coffee\icon\title-icon.svg" />
+    <Content Include="download-version\assets\img\coffee\menu\coffe_menu_1.png" />
+    <Content Include="download-version\assets\img\coffee\menu\coffe_menu_2.png" />
+    <Content Include="download-version\assets\img\coffee\menu\coffe_menu_3.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_1.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_2.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_3.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_4.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_5.png" />
+    <Content Include="download-version\assets\img\coffee\menu\product_coffee_6.png" />
+    <Content Include="download-version\assets\img\coffee\normal\about_coffee.png" />
+    <Content Include="download-version\assets\img\coffee\normal\about_coffee_shape.png" />
+    <Content Include="download-version\assets\img\coffee\normal\booking_coffee_bg.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\coffee_cat_bg.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\coffee_feature.png" />
+    <Content Include="download-version\assets\img\coffee\normal\coffee_footer_bg.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\coffee_menu_bg.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\coffee_offer_bg.png" />
+    <Content Include="download-version\assets\img\coffee\normal\feature_1_1.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\feature_1_2.jpg" />
+    <Content Include="download-version\assets\img\coffee\normal\feature_1_3.jpg" />
+    <Content Include="download-version\assets\img\coffee\shape\coffee_shape_1.png" />
+    <Content Include="download-version\assets\img\coffee\shape\coffee_shape_1_1.png" />
+    <Content Include="download-version\assets\img\coffee\shape\coffee_shape_2.png" />
+    <Content Include="download-version\assets\img\coffee\shape\coffee_shape_3.png" />
+    <Content Include="download-version\assets\img\coffee\shape\coffee_shape_4.png" />
+    <Content Include="download-version\assets\img\coffee\shape\leaf_coffee.png" />
+    <Content Include="download-version\assets\img\coffee\shape\line_shape_1.png" />
+    <Content Include="download-version\assets\img\coffee\shape\offer_shape_bg.svg" />
+    <Content Include="download-version\assets\img\coffee\shape\subscribe_1_1.png" />
+    <Content Include="download-version\assets\img\coffee\shape\subscribe_1_2.png" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_1.jpg" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_2.jpg" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_3.jpg" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_4.jpg" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_5.jpg" />
+    <Content Include="download-version\assets\img\coffee\testi\testi_3_6.jpg" />
+    <Content Include="download-version\assets\img\favicons\android-chrome-512x512.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-144x144.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-192x192.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-36x36.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-48x48.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-72x72.png" />
+    <Content Include="download-version\assets\img\favicons\android-icon-96x96.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-114x114.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-120x120.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-144x144.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-152x152.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-180x180.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-57x57.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-60x60.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-72x72.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-76x76.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon-precomposed.png" />
+    <Content Include="download-version\assets\img\favicons\apple-icon.png" />
+    <Content Include="download-version\assets\img\favicons\browserconfig.xml" />
+    <Content Include="download-version\assets\img\favicons\favicon-16x16.png" />
+    <Content Include="download-version\assets\img\favicons\favicon-32x32.png" />
+    <Content Include="download-version\assets\img\favicons\favicon-96x96.png" />
+    <Content Include="download-version\assets\img\favicons\favicon.ico" />
+    <Content Include="download-version\assets\img\favicons\favicon.png" />
+    <Content Include="download-version\assets\img\favicons\ms-icon-144x144.png" />
+    <Content Include="download-version\assets\img\favicons\ms-icon-150x150.png" />
+    <Content Include="download-version\assets\img\favicons\ms-icon-310x310.png" />
+    <Content Include="download-version\assets\img\favicons\ms-icon-70x70.png" />
+    <Content Include="download-version\assets\img\gallery\gallery_1_1.jpg" />
+    <Content Include="download-version\assets\img\gallery\gallery_1_2.jpg" />
+    <Content Include="download-version\assets\img\gallery\gallery_1_3.jpg" />
+    <Content Include="download-version\assets\img\gallery\gallery_1_4.jpg" />
+    <Content Include="download-version\assets\img\gallery\gallery_1_5.jpg" />
+    <Content Include="download-version\assets\img\hero\button_1.png" />
+    <Content Include="download-version\assets\img\hero\button_2.png" />
+    <Content Include="download-version\assets\img\hero\curve_line_1.png" />
+    <Content Include="download-version\assets\img\hero\curve_line_2.png" />
+    <Content Include="download-version\assets\img\hero\discount_1.png" />
+    <Content Include="download-version\assets\img\hero\dot_bg.png" />
+    <Content Include="download-version\assets\img\hero\dot_bg_white.png" />
+    <Content Include="download-version\assets\img\hero\dot_line.png" />
+    <Content Include="download-version\assets\img\hero\dot_line_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_bg_1_1.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_1_2.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_1_3.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_2_1.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_2_1_phone.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_3_1.png" />
+    <Content Include="download-version\assets\img\hero\hero_bg_3_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_bg_3_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_bg_phone_1_1.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_phone_1_2.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_bg_phone_1_3.jpg" />
+    <Content Include="download-version\assets\img\hero\hero_img_2_1.png" />
+    <Content Include="download-version\assets\img\hero\hero_img_2_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_img_2_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_10.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_11.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_1.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_4.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_5.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_2_6.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_4.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_5.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_6.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_7.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_8.png" />
+    <Content Include="download-version\assets\img\hero\hero_shape_9.png" />
+    <Content Include="download-version\assets\img\hero\hero_text_1.png" />
+    <Content Include="download-version\assets\img\hero\hero_text_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_text_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_1.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_1_active.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_2.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_2_active.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_3.png" />
+    <Content Include="download-version\assets\img\hero\hero_thumb_2_3_active.png" />
+    <Content Include="download-version\assets\img\hero\preview_1.jpg" />
+    <Content Include="download-version\assets\img\hero\preview_2.jpg" />
+    <Content Include="download-version\assets\img\hero\preview_3.jpg" />
+    <Content Include="download-version\assets\img\hero\shape_bg_1.png" />
+    <Content Include="download-version\assets\img\hero\title_line.png" />
+    <Content Include="download-version\assets\img\icon\a-feature_1_1.svg" />
+    <Content Include="download-version\assets\img\icon\a-feature_1_2.svg" />
+    <Content Include="download-version\assets\img\icon\a-feature_1_3.svg" />
+    <Content Include="download-version\assets\img\icon\category_1_1.svg" />
+    <Content Include="download-version\assets\img\icon\category_1_2.svg" />
+    <Content Include="download-version\assets\img\icon\category_1_3.svg" />
+    <Content Include="download-version\assets\img\icon\category_1_4.svg" />
+    <Content Include="download-version\assets\img\icon\category_1_5.svg" />
+    <Content Include="download-version\assets\img\icon\check_3.svg" />
+    <Content Include="download-version\assets\img\icon\counter_1_1.svg" />
+    <Content Include="download-version\assets\img\icon\counter_1_2.svg" />
+    <Content Include="download-version\assets\img\icon\counter_1_3.svg" />
+    <Content Include="download-version\assets\img\icon\counter_1_4.svg" />
+    <Content Include="download-version\assets\img\icon\feature_1_1.svg" />
+    <Content Include="download-version\assets\img\icon\feature_1_2.svg" />
+    <Content Include="download-version\assets\img\icon\feature_1_3.svg" />
+    <Content Include="download-version\assets\img\icon\feature_2_1.svg" />
+    <Content Include="download-version\assets\img\icon\feature_2_2.svg" />
+    <Content Include="download-version\assets\img\icon\feature_3_1.svg" />
+    <Content Include="download-version\assets\img\icon\feature_3_2.svg" />
+    <Content Include="download-version\assets\img\icon\feature_3_3.svg" />
+    <Content Include="download-version\assets\img\icon\feature_4_1.svg" />
+    <Content Include="download-version\assets\img\icon\feature_4_2.svg" />
+    <Content Include="download-version\assets\img\icon\feature_4_3.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_1.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_2.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_3.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_4.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_5.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_6.svg" />
+    <Content Include="download-version\assets\img\icon\menu_1_7.svg" />
+    <Content Include="download-version\assets\img\icon\quote_left.svg" />
+    <Content Include="download-version\assets\img\icon\title_icon.svg" />
+    <Content Include="download-version\assets\img\logo-coffee-white.svg" />
+    <Content Include="download-version\assets\img\logo-coffee.svg" />
+    <Content Include="download-version\assets\img\logo-white.svg" />
+    <Content Include="download-version\assets\img\logo.svg" />
+    <Content Include="download-version\assets\img\menu\menu_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_10.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_11.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_12.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_2.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_3.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_4.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_5.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_6.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_7.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_8.png" />
+    <Content Include="download-version\assets\img\menu\menu_1_9.png" />
+    <Content Include="download-version\assets\img\menu\menu_big_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_big_1_2.png" />
+    <Content Include="download-version\assets\img\menu\menu_big_1_3.png" />
+    <Content Include="download-version\assets\img\menu\menu_big_1_4.png" />
+    <Content Include="download-version\assets\img\menu\menu_details_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_2.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_3.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_4.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_5.png" />
+    <Content Include="download-version\assets\img\menu\menu_list_1_6.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_10.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_11.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_12.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_13.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_14.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_15.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_16.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_17.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_18.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_19.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_2.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_20.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_3.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_4.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_5.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_6.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_7.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_8.png" />
+    <Content Include="download-version\assets\img\menu\menu_rest_1_9.png" />
+    <Content Include="download-version\assets\img\menu\menu_thumb_1_1.png" />
+    <Content Include="download-version\assets\img\menu\menu_thumb_1_2.png" />
+    <Content Include="download-version\assets\img\menu\menu_thumb_1_3.png" />
+    <Content Include="download-version\assets\img\menu\menu_thumb_1_4.png" />
+    <Content Include="download-version\assets\img\menu\menu_thumb_1_5.png" />
+    <Content Include="download-version\assets\img\menu\product_details_1_1.png" />
+    <Content Include="download-version\assets\img\menu\product_details_1_2.png" />
+    <Content Include="download-version\assets\img\menu\product_details_1_3.png" />
+    <Content Include="download-version\assets\img\menu\product_details_1_4.png" />
+    <Content Include="download-version\assets\img\menu\product_details_1_5.png" />
+    <Content Include="download-version\assets\img\normal\about_1_1.png" />
+    <Content Include="download-version\assets\img\normal\about_1_2.jpg" />
+    <Content Include="download-version\assets\img\normal\about_2_1.png" />
+    <Content Include="download-version\assets\img\normal\about_2_2.png" />
+    <Content Include="download-version\assets\img\normal\about_3_1.png" />
+    <Content Include="download-version\assets\img\normal\about_avater.jpg" />
+    <Content Include="download-version\assets\img\normal\error_bg.png" />
+    <Content Include="download-version\assets\img\normal\error_img.png" />
+    <Content Include="download-version\assets\img\normal\faq_1.png" />
+    <Content Include="download-version\assets\img\normal\video_1.jpg" />
+    <Content Include="download-version\assets\img\normal\why_1_1.png" />
+    <Content Include="download-version\assets\img\normal\why_1_2.png" />
+    <Content Include="download-version\assets\img\shape\about_line.png" />
+    <Content Include="download-version\assets\img\shape\bg_shape_1.png" />
+    <Content Include="download-version\assets\img\shape\bg_shape_2.png" />
+    <Content Include="download-version\assets\img\shape\bg_shape_3.png" />
+    <Content Include="download-version\assets\img\shape\bg_shape_4.png" />
+    <Content Include="download-version\assets\img\shape\bg_shape_5.png" />
+    <Content Include="download-version\assets\img\shape\Burger_1.png" />
+    <Content Include="download-version\assets\img\shape\chicken_1.png" />
+    <Content Include="download-version\assets\img\shape\chips_1.png" />
+    <Content Include="download-version\assets\img\shape\chips_2.png" />
+    <Content Include="download-version\assets\img\shape\chocolate_1.png" />
+    <Content Include="download-version\assets\img\shape\discount_bg_1.svg" />
+    <Content Include="download-version\assets\img\shape\discount_bg_2.svg" />
+    <Content Include="download-version\assets\img\shape\feature_icon_bg.svg" />
+    <Content Include="download-version\assets\img\shape\food_1.png" />
+    <Content Include="download-version\assets\img\shape\leaf_1.png" />
+    <Content Include="download-version\assets\img\shape\leaf_2.png" />
+    <Content Include="download-version\assets\img\shape\leaf_3.png" />
+    <Content Include="download-version\assets\img\shape\leaf_4.png" />
+    <Content Include="download-version\assets\img\shape\leaf_5.png" />
+    <Content Include="download-version\assets\img\shape\leaf_6.png" />
+    <Content Include="download-version\assets\img\shape\leaf_group_1.png" />
+    <Content Include="download-version\assets\img\shape\leaf_group_2.png" />
+    <Content Include="download-version\assets\img\shape\plate_1.png" />
+    <Content Include="download-version\assets\img\shape\plate_2.png" />
+    <Content Include="download-version\assets\img\shape\plate_3.png" />
+    <Content Include="download-version\assets\img\shape\pot_1.png" />
+    <Content Include="download-version\assets\img\shape\red_chili.png" />
+    <Content Include="download-version\assets\img\shape\red_chili_2.png" />
+    <Content Include="download-version\assets\img\team\team_1_1.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_10.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_11.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_12.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_2.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_3.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_4.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_5.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_6.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_7.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_8.jpg" />
+    <Content Include="download-version\assets\img\team\team_1_9.jpg" />
+    <Content Include="download-version\assets\img\team\team_details.jpg" />
+    <Content Include="download-version\assets\img\testimonial\review_1_1.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_2.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_3.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_4.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_5.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_6.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_7.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_8.png" />
+    <Content Include="download-version\assets\img\testimonial\review_1_9.png" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_1.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_2.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_3.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_4.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_5.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_6.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_7.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_8.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_1_9.jpg" />
+    <Content Include="download-version\assets\img\testimonial\testi_big_1.png" />
+    <Content Include="download-version\assets\img\update_2\bg\booking_bg_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\booking_bg_2.png" />
+    <Content Include="download-version\assets\img\update_2\bg\booking_bg_3.png" />
+    <Content Include="download-version\assets\img\update_2\bg\breadcumb_bg_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\cta_bg_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\download_bg_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\feature_bg_5.png" />
+    <Content Include="download-version\assets\img\update_2\bg\footer_bg_1.png" />
+    <Content Include="download-version\assets\img\update_2\bg\footer_bg_5.png" />
+    <Content Include="download-version\assets\img\update_2\bg\footer_bg_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\footer_bg_7.png" />
+    <Content Include="download-version\assets\img\update_2\bg\hero_bg_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\menu_bg_5.png" />
+    <Content Include="download-version\assets\img\update_2\bg\menu_bg_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\menu_title_bg.svg" />
+    <Content Include="download-version\assets\img\update_2\bg\newsletter_bg_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\newsletter_bg_2.png" />
+    <Content Include="download-version\assets\img\update_2\bg\offer_banner_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\pattern_bg_1.png" />
+    <Content Include="download-version\assets\img\update_2\bg\project_bg_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\bg\testi-block_bg.png" />
+    <Content Include="download-version\assets\img\update_2\bg\testi_bg_4.png" />
+    <Content Include="download-version\assets\img\update_2\bg\year_title_bg.svg" />
+    <Content Include="download-version\assets\img\update_2\blog\blog_3_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\blog\blog_3_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\blog\blog_3_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\blog\blog_3_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\blog\recent-post-2-1.jpg" />
+    <Content Include="download-version\assets\img\update_2\blog\recent-post-2-2.jpg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_1.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_1.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_2.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_2.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_3.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_3.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_4.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_4.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_5.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_5.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_6.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_6.svg" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_7.png" />
+    <Content Include="download-version\assets\img\update_2\brand\brand_2_7.svg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_2_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_2_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_2_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_2_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_2_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_3_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_7.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_8.jpg" />
+    <Content Include="download-version\assets\img\update_2\gallery\gallery_4_9.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_10.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_5.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_7.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_8.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_2_9.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_5.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_3_7.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_5.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_7.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_8.png" />
+    <Content Include="download-version\assets\img\update_2\hero\burger_part_9.png" />
+    <Content Include="download-version\assets\img\update_2\hero\cherry_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_5_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_1_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_1_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_1_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_bg_7_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_burger_5_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_burger_5_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_burger_5_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_fire.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_fire_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_fire_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_5.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_img_6_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_5.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_2_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_shape_4.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_5_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_5_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_5_332.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_6_1.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_6_2.png" />
+    <Content Include="download-version\assets\img\update_2\hero\hero_thumb_6_3.png" />
+    <Content Include="download-version\assets\img\update_2\hero\text_pattern.jpg" />
+    <Content Include="download-version\assets\img\update_2\hero\tomato_6.png" />
+    <Content Include="download-version\assets\img\update_2\hero\tree_2.png" />
+    <Content Include="download-version\assets\img\update_2\icon\about-award.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\about_feature_2_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\about_feature_2_2.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\contact_feature_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\contact_feature_2.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\contact_feature_3.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\contact_feature_4.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\feature_3_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\feature_3_2.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\feature_3_3.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\feature_3_4.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\like_comment.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\phone-call.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\quote_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_feature_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_feature_2.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_feature_3.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_feature_4.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_list_1.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_list_2.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_list_3.svg" />
+    <Content Include="download-version\assets\img\update_2\icon\why_list_4.svg" />
+    <Content Include="download-version\assets\img\update_2\menu\burger.png" />
+    <Content Include="download-version\assets\img\update_2\menu\drink.png" />
+    <Content Include="download-version\assets\img\update_2\menu\food.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_1_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_1_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_1_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_1_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_1_5.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_5.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_6.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_7.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_2_8.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_10.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_11.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_12.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_5.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_6.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_7.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_8.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_3_9.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_header_bg_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_1_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_1_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_1_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_1_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_2_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_2_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_2_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_2_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_3_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_3_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_3_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_3_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_4_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_4_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_4_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_4_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_5_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_5_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_5_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_5_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_6_1.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_6_2.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_6_3.png" />
+    <Content Include="download-version\assets\img\update_2\menu\menu_list_6_4.png" />
+    <Content Include="download-version\assets\img\update_2\menu\pizza.png" />
+    <Content Include="download-version\assets\img\update_2\menu\sushi.png" />
+    <Content Include="download-version\assets\img\update_2\normal\about_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\about_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\about_6_1.png" />
+    <Content Include="download-version\assets\img\update_2\normal\about_6_2.png" />
+    <Content Include="download-version\assets\img\update_2\normal\about_7_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\about_7_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\about_7_3.png" />
+    <Content Include="download-version\assets\img\update_2\normal\about_8_1.png" />
+    <Content Include="download-version\assets\img\update_2\normal\big-text.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_5_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_1.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_2.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_3.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_4.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_5.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_6.png" />
+    <Content Include="download-version\assets\img\update_2\normal\category_6_7.png" />
+    <Content Include="download-version\assets\img\update_2\normal\dish.png" />
+    <Content Include="download-version\assets\img\update_2\normal\image_menu.png" />
+    <Content Include="download-version\assets\img\update_2\normal\image_menu_2.png" />
+    <Content Include="download-version\assets\img\update_2\normal\image_menu_bg.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\testi-card_img.png" />
+    <Content Include="download-version\assets\img\update_2\normal\testi-card_shape_1.png" />
+    <Content Include="download-version\assets\img\update_2\normal\testi-card_shape_2.png" />
+    <Content Include="download-version\assets\img\update_2\normal\testi-card_shape_3.png" />
+    <Content Include="download-version\assets\img\update_2\normal\testi_4_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\testi_4_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\testi_4_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\testi_4_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\normal\video_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\about-thumb_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\barger.png" />
+    <Content Include="download-version\assets\img\update_2\shape\bucket_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\capsicum_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\cherry_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\discount_bg_1.svg" />
+    <Content Include="download-version\assets\img\update_2\shape\discount_bg_2.svg" />
+    <Content Include="download-version\assets\img\update_2\shape\fire.png" />
+    <Content Include="download-version\assets\img\update_2\shape\fire_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\food-safety.png" />
+    <Content Include="download-version\assets\img\update_2\shape\footer_shape_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\footer_shape_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\french_fry.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_3.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_4.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_5.png" />
+    <Content Include="download-version\assets\img\update_2\shape\layer_6.png" />
+    <Content Include="download-version\assets\img\update_2\shape\pea_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\pizza_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\plate_3.png" />
+    <Content Include="download-version\assets\img\update_2\shape\red_chili.png" />
+    <Content Include="download-version\assets\img\update_2\shape\red_chili_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\red_chili_3.png" />
+    <Content Include="download-version\assets\img\update_2\shape\shape_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\shape_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\shape_3.png" />
+    <Content Include="download-version\assets\img\update_2\shape\shape_4.png" />
+    <Content Include="download-version\assets\img\update_2\shape\shape_5.png" />
+    <Content Include="download-version\assets\img\update_2\shape\title_left.svg" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_3.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_4.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_5.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_6.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tomato_7.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tree_1.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tree_2.png" />
+    <Content Include="download-version\assets\img\update_2\shape\tree_3.png" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_7.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_2_8.jpg" />
+    <Content Include="download-version\assets\img\update_2\team\team_details_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_1.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_2.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_3.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_4.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_5.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_6.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_7.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_8.jpg" />
+    <Content Include="download-version\assets\img\update_2\widget\gallery_2_9.jpg" />
+    <Content Include="download-version\assets\js\bootstrap.min.js" />
+    <Content Include="download-version\assets\js\imagesloaded.pkgd.min.js" />
+    <Content Include="download-version\assets\js\isotope.pkgd.min.js" />
+    <Content Include="download-version\assets\js\jquery.counterup.min.js" />
+    <Content Include="download-version\assets\js\jquery.datetimepicker.min.js" />
+    <Content Include="download-version\assets\js\jquery.magnific-popup.min.js" />
+    <Content Include="download-version\assets\js\layerslider.kreaturamedia.jquery.js" />
+    <Content Include="download-version\assets\js\layerslider.transitions.js" />
+    <Content Include="download-version\assets\js\layerslider.utils.js" />
+    <Content Include="download-version\assets\js\main.js" />
+    <Content Include="download-version\assets\js\slick.min.js" />
+    <Content Include="download-version\assets\js\vendor\jquery-3.6.0.min.js" />
+    <Content Include="download-version\blog-details.html" />
+    <Content Include="download-version\blog.html" />
+    <Content Include="download-version\cart.html" />
+    <Content Include="download-version\checkout.html" />
+    <Content Include="download-version\contact-v2.html" />
+    <Content Include="download-version\contact.html" />
+    <Content Include="download-version\error.html" />
+    <Content Include="download-version\faq-v2.html" />
+    <Content Include="download-version\faq.html" />
+    <Content Include="download-version\gallery.html" />
+    <Content Include="download-version\home-fast-food-rastaurant.html" />
+    <Content Include="download-version\home-fast-food-v2.html" />
+    <Content Include="download-version\home-fast-food.html" />
+    <Content Include="download-version\home-pizza-burger-dark.html" />
+    <Content Include="download-version\home-pizza-burger.html" />
+    <Content Include="download-version\home-restaurant-v2.html" />
+    <Content Include="download-version\home-restaurant.html" />
+    <Content Include="download-version\home-tea-coffee.html" />
+    <Content Include="download-version\index.html" />
+    <Content Include="download-version\layerslider\skins\v6\loading.gif" />
+    <Content Include="download-version\layerslider\skins\v6\nothumb.png" />
+    <Content Include="download-version\layerslider\skins\v6\skin.css" />
+    <Content Include="download-version\mail.php" />
+    <Content Include="download-version\menu-fast-v2.html" />
+    <Content Include="download-version\menu-fast.html" />
+    <Content Include="download-version\menu-rest-v2.html" />
+    <Content Include="download-version\menu-rest.html" />
+    <Content Include="download-version\reservation-v2.html" />
+    <Content Include="download-version\reservation.html" />
+    <Content Include="download-version\reserve.php" />
+    <Content Include="download-version\shop-details-v2.html" />
+    <Content Include="download-version\shop-details.html" />
+    <Content Include="download-version\shop-v2.html" />
+    <Content Include="download-version\shop.html" />
+    <Content Include="download-version\team-details-v2.html" />
+    <Content Include="download-version\team-details.html" />
+    <Content Include="download-version\team-v2.html" />
+    <Content Include="download-version\team.html" />
+    <Content Include="download-version\testimonial-v2.html" />
+    <Content Include="download-version\testimonial.html" />
+    <Content Include="download-version\typography.html" />
+    <Content Include="download-version\wishlist.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="download-version\assets\css\style.css.map" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-brands-400.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-brands-400.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-duotone-900.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-duotone-900.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-light-300.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-light-300.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-regular-400.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-regular-400.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-solid-900.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-solid-900.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-thin-100.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-thin-100.woff2" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-v4compatibility.ttf" />
+    <Content Include="download-version\assets\fonts\fontawesome\fa-v4compatibility.woff2" />
+    <Content Include="download-version\assets\img\favicons\manifest.json" />
+    <Content Include="download-version\assets\sass\base\_function.scss" />
+    <Content Include="download-version\assets\sass\base\_mixin.scss" />
+    <Content Include="download-version\assets\sass\base\_typography.scss" />
+    <Content Include="download-version\assets\sass\base\_variable.scss" />
+    <Content Include="download-version\assets\sass\base\_wpdefault.scss" />
+    <Content Include="download-version\assets\sass\reset\_container.scss" />
+    <Content Include="download-version\assets\sass\reset\_grid.scss" />
+    <Content Include="download-version\assets\sass\reset\_input.scss" />
+    <Content Include="download-version\assets\sass\reset\_mobilemenu.scss" />
+    <Content Include="download-version\assets\sass\reset\_slick-slider.scss" />
+    <Content Include="download-version\assets\sass\spacing\_margin.scss" />
+    <Content Include="download-version\assets\sass\spacing\_padding.scss" />
+    <Content Include="download-version\assets\sass\spacing\_section-space.scss" />
+    <Content Include="download-version\assets\sass\spacing\_spacing.scss" />
+    <Content Include="download-version\assets\sass\style.scss" />
+    <Content Include="download-version\assets\sass\template\breadcumb\_breadcumb-v1.scss" />
+    <Content Include="download-version\assets\sass\template\breadcumb\_breadcumb-v2.scss" />
+    <Content Include="download-version\assets\sass\template\footers\_footer.scss" />
+    <Content Include="download-version\assets\sass\template\headers\_header.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_about.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_blog-extra.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_blog.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_booking.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_cart.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_category.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_checkout.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_comments.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_contact.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_counter.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_download.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_error.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_faq.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_feature.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_gallery.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_hero.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_home_dark.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_menu.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_offer.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_pagination-v1.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_popupsearch-v1.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_products.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_sidemenu-v1.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_simple-sections.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_tabmenu.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_team.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_testimonial.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_why.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_wishlist.scss" />
+    <Content Include="download-version\assets\sass\template\sections\_woocommerce.scss" />
+    <Content Include="download-version\assets\sass\template\widgets\_widget-default-list.scss" />
+    <Content Include="download-version\assets\sass\template\widgets\_widget-footer.scss" />
+    <Content Include="download-version\assets\sass\template\widgets\_widget-sidebar.scss" />
+    <Content Include="download-version\assets\sass\update_1\_blog-extra.scss" />
+    <Content Include="download-version\assets\sass\update_1\_category.scss" />
+    <Content Include="download-version\assets\sass\update_1\_common.scss" />
+    <Content Include="download-version\assets\sass\update_1\_feature.scss" />
+    <Content Include="download-version\assets\sass\update_1\_footer.scss" />
+    <Content Include="download-version\assets\sass\update_1\_global.scss" />
+    <Content Include="download-version\assets\sass\update_1\_header.scss" />
+    <Content Include="download-version\assets\sass\update_1\_hero.scss" />
+    <Content Include="download-version\assets\sass\update_1\_testimonial.scss" />
+    <Content Include="download-version\assets\sass\update_2\_about.scss" />
+    <Content Include="download-version\assets\sass\update_2\_blog-extra.scss" />
+    <Content Include="download-version\assets\sass\update_2\_brand.scss" />
+    <Content Include="download-version\assets\sass\update_2\_category.scss" />
+    <Content Include="download-version\assets\sass\update_2\_common.scss" />
+    <Content Include="download-version\assets\sass\update_2\_feature.scss" />
+    <Content Include="download-version\assets\sass\update_2\_footer.scss" />
+    <Content Include="download-version\assets\sass\update_2\_global.scss" />
+    <Content Include="download-version\assets\sass\update_2\_header.scss" />
+    <Content Include="download-version\assets\sass\update_2\_hero.scss" />
+    <Content Include="download-version\assets\sass\update_2\_product.scss" />
+    <Content Include="download-version\assets\sass\update_2\_team.scss" />
+    <Content Include="download-version\assets\sass\update_2\_testimonial.scss" />
+    <Content Include="download-version\assets\sass\utilities\_animation.scss" />
+    <Content Include="download-version\assets\sass\utilities\_background.scss" />
+    <Content Include="download-version\assets\sass\utilities\_btns.scss" />
+    <Content Include="download-version\assets\sass\utilities\_common.scss" />
+    <Content Include="download-version\assets\sass\utilities\_font.scss" />
+    <Content Include="download-version\assets\sass\utilities\_overlay.scss" />
+    <Content Include="download-version\assets\sass\utilities\_preloader.scss" />
+    <Content Include="download-version\assets\sass\utilities\_text-color.scss" />
+    <Content Include="download-version\assets\sass\utilities\_titles.scss" />
+    <Content Include="download-version\assets\sass\_update_1.scss" />
+    <Content Include="download-version\assets\sass\_update_2.scss" />
+    <Content Include="download-version\layerslider\skins\v6\info.json" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Home\Category.cshtml" />
+    <Content Include="Views\Home\MenuList.cshtml" />
+    <Content Include="Views\Home\MenuDetail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50658</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44307/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

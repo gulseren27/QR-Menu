@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34407.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qrmenu", "qrmenu\qrmenu.csproj", "{9952546E-8944-4C4B-8B60-007E39D2A3CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9952546E-8944-4C4B-8B60-007E39D2A3CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9952546E-8944-4C4B-8B60-007E39D2A3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9952546E-8944-4C4B-8B60-007E39D2A3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9952546E-8944-4C4B-8B60-007E39D2A3CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9306292-D5BE-4AC7-96D3-DC3EB013A0D4}
+	EndGlobalSection
+EndGlobal
